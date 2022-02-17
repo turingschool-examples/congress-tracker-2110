@@ -1,8 +1,11 @@
 WELCOME!
 
-<%= link_to "Register", '/register' %>
-<%= link_to "Log In", '/login' %>
-
+<% if current_user  %>
+  <%= link_to "Logout", '/logout', method: :delete %>
+<% else %>
+  <%= link_to "Register", '/register' %>
+  <%= link_to "Log In", '/login' %>
+<% end %>
 
 <%= form_with url: search_path, local: true do |form| %>
   <%= form.label :search, 'Search For Senators By Last Name:' %>

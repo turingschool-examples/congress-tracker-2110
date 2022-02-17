@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.save
+      # cookies[:cookie_type] = 'sugar'
+      session[:user_id] = user.id
       redirect_to '/search'
     else
       redirect_to '/register'
@@ -15,4 +17,6 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:email, :password, :password_confirmation)
   end
+
+  
 end
