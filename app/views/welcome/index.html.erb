@@ -1,3 +1,9 @@
+WELCOME!
+
+<%= link_to "Register", '/register' %>
+<%= link_to "Log In", '/login' %>
+
+
 <%= form_with url: search_path, local: true do |form| %>
   <%= form.label :search, 'Search For Senators By Last Name:' %>
   <%= form.text_field :search %>
