@@ -8,6 +8,7 @@ class CongressFacade
   end
 
   def self.senate_search(query)
+    binding.pry
     member_data = CongressService.senate
 
     members = member_data[:results][0][:members]

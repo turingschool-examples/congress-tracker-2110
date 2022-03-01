@@ -14,7 +14,8 @@ class CongressController < ApplicationController
 
 
   def index
-    @members = CongressFacade.members(params[:state])
+    @state = params[:state]
+    @members = CongressFacade.members(@state)
 
     render "welcome/index"
   end
