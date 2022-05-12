@@ -27,27 +27,27 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 11 May 2022 22:56:16 GMT
+      - Thu, 12 May 2022 01:54:28 GMT
       X-Amzn-Requestid:
-      - 84c697f8-a732-4257-a7dc-c2a1a6022288
+      - 5dc607fb-2d81-441c-b462-d63220963db5
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
       - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
       X-Amz-Apigw-Id:
-      - R-7KkHZRoAMFmYQ=
+      - R_VRTHJioAMF6jg=
       Access-Control-Allow-Methods:
       - GET,OPTIONS
       X-Amzn-Trace-Id:
-      - Root=1-627c3f10-0572dd193fccc2a9266fd45b;Sampled=0
+      - Root=1-627c68d4-0b6dc68b6732d2e67ef13958;Sampled=0
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 468fad301432f03616d8126f343f32b0.cloudfront.net (CloudFront)
+      - 1.1 8ef3398f0a11d6fa61753f1c21c6c9d2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD56-P4
+      - ORD53-C3
       X-Amz-Cf-Id:
-      - PB8EjXtH5mvsh7YvRTndUfsIxajFy6pJRk2wQZgWm02-avz0GWZRlw==
+      - JBaYXlG50BJ6vPKqIklDhSSgk9EnxlVarznJndJgqxwUdwPXiIq_6g==
     body:
       encoding: UTF-8
       string: "{\n   \"status\":\"OK\",\n   \"copyright\":\" Copyright (c) 2022 Pro
@@ -2685,5 +2685,5 @@ http_interactions:
         \"senior\",\n                 \"lis_id\": \"S391\"\n                 ,\"missed_votes_pct\":
         1.81,\n                 \"votes_with_party_pct\": 94.99,\n                 \"votes_against_party_pct\":
         5.01\n               }\n             ]\n      }\n   ]\n}\n"
-  recorded_at: Wed, 11 May 2022 22:56:16 GMT
+  recorded_at: Thu, 12 May 2022 01:54:28 GMT
 recorded_with: VCR 6.1.0
