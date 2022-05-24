@@ -1,14 +1,12 @@
-WELCOME!
+<% if current_user %>
+  Welcome, back!
+  <%= link_to 'Log Out', '/logout', method: :delete %>
+<% else %>
+  WELCOME! <br>
 
-<%= link_to "Register", '/register' %>
-<%= link_to "Log In", '/login' %>
-
-
-<%= form_with url: search_path, local: true do |form| %>
-  <%= form.label :search, 'Search For Senators By Last Name:' %>
-  <%= form.text_field :search %>
-  <%= form.submit 'Search' %>
+  <%= link_to "Register", '/register' %>
+  <%= link_to "Log In", '/login' %>
 <% end %>
-<% if @member %>
-  <h5>Senator <%= @member[:first_name].concat(" ").concat(@member[:last_name]) %> was found! Their twitter is: <%= @member[:twitter_account] %></h5>
-<% end %>
+<br>
+<%= link_to "Let's search some stuff", '/search' %>
+
