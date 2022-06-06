@@ -8,4 +8,13 @@ class CongressFacade
       Member.new(member_data)
     end
   end
+
+  def self.senate_search(query)
+    members = CongressService.senate_members
+    found_members = members.find_all { |m| m[:last_name] == query }
+
+    return nil unless found_members.present?
+
+    Member.new(found_members.first)
+  end
 end
