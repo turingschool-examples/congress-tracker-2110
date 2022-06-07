@@ -11,6 +11,7 @@ class CongressFacade
 
   def self.senate_search(query)
     members = CongressService.senate_members
+    binding.pry
     found_members = members.find_all { |m| m[:last_name] == query }
 
     return nil unless found_members.present?

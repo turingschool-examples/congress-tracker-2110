@@ -12,9 +12,12 @@ class CongressService
   end
 
   def self.senate_members
-    response = conn.get("/congress/v1/116/senate/members.json")
+    Rails.cache.fetch('senate members', expires_in: 1.day) do
+      binding.pry
+      response = conn.get("/congress/v1/116/senate/members.json")
 
-    data = JSON.parse(response.body, symbolize_names: true)
-    data[:results][0][:members]
+      data = JSON.parse(response.body, symbolize_names: true)
+      data[:results][0][:members]
+    end
   end
 end
